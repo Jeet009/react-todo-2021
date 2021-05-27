@@ -97,3 +97,18 @@ input:focus {
   opacity: 0.5;
   text-decoration: line-through;
 }
+@media screen and (max-width: 500px) {
+  input {
+    width: 70%;
+  }
+  .btn-custom {
+    width: 20%;
+  }
+  .todo {
+    width: 90%;
+  }
+  .todo h5 {
+    font-size: 12px;
+    width: 80%;
+  }
+}
