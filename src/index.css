@@ -1,13 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "form-view";
+}
+
+.form-view {
+  background-color: rgb(65, 65, 65);
+  grid-area: form-view;
+}
+
+.form-container {
+  width: 100%;
+  min-height: 13vh;
+
+  background-color: rgb(59, 59, 59);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 50px 0 rgba(0, 0, 0, 0.19);
+}
+form {
+  min-height: 13vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: rgb(77, 77, 77);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border: 1px solid rgba(204, 204, 204, 0.082);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus {
+  border: 1px solid rgba(204, 204, 204, 0.082);
+
+  outline: none;
+}
+.btn-custom {
+  width: 5%;
+  background-color: #9deaff;
+  color: rgb(73, 73, 73);
+  padding: 12px 20px;
+  margin: 8px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+.todo-container {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.todo {
+  height: 7vh;
+  background-color: rgb(77, 77, 77);
+  color: white;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo h5 {
+  font-size: large;
+  letter-spacing: 1px;
+}
+.todo h5:hover {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
